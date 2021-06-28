@@ -30,16 +30,17 @@ export const NavItem = styled.div`
     float: left;
   }
   &.right {
+    color:#66ccff;
     float: right;
   }
   &.active {
-    color : skyblue;
+    color : #66ccff;
   }
   
 `
 export const NavSearch = styled.input.attrs(
     {
-        placeholder : '搜索',
+        placeholder : '输入关键字或片名',
     }
 )`
   width : 160px;
@@ -70,13 +71,19 @@ export const Button = styled.div`
   padding : 0 20px;
   line-height : 38px;
   border-radius : 19px;
-  border : 1px solid skyblue;
+  border : 1px solid #66ccff;
   font-size : 14px;
   &.reg{
-    color : skyblue;
+    color : #66ccff;
   }
   &.personalrecommendation{
-    background : skyblue;
+    background : #66ccff;
     color : #fff;
+  }
+  &.search_btn{
+    font-size:20px;
+    border:none;
+    float:right;
+    margin-right:45%;
   }
 `

@@ -17,7 +17,9 @@ function Header(){
     <Logo />
     </Link>
     <Nav>
+        <Link to="/">
         <NavItem className="left active">首页</NavItem>
+        </Link>
         <Link to="/login">
         <NavItem className="right">登陆 </NavItem>
         </Link>
@@ -25,12 +27,17 @@ function Header(){
         <NavItem className="right">个人主页 </NavItem>
         </Link>
         <NavSearch/>
+        <Button className = 'search_btn'>🔍</Button>
+        
     </Nav>
+    
     <Addition>
+        <Link to = '/register'>
         <Button className = 'reg'>
             注册
         </Button>
-        <Button className = 'personalrecommendation'>
+        </Link>
+        <Button className = 'personalrecommendation' >
            个性化推荐
         </Button>
     </Addition>

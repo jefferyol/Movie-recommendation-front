@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { LoginWrapper, LoginBox, Input, Button } from './style';
+import { LoginWrapper, LoginBox, Input, Button,LoginHead} from './style';
 import { actionCreators } from './store';
 
 class Login extends PureComponent {
@@ -11,6 +11,7 @@ class Login extends PureComponent {
 			return (
 				<LoginWrapper>
 					<LoginBox>
+						<LoginHead>Login</LoginHead>
 						<Input placeholder='账号' innerRef={(input) => {this.account = input}}/>
 						<Input placeholder='密码' type='password' innerRef={(input) => {this.password = input}}/>
 						<Button onClick={() => this.props.login(this.account, this.password)}>登陆</Button>

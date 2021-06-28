@@ -2,6 +2,7 @@ import React from 'react';
 import 'antd/dist/antd.css';
 import { Skeleton, Switch, Card, Avatar,Button,Input,Tag,  Tooltip } from 'antd';
 import { EditOutlined, EllipsisOutlined, SettingOutlined,UserOutlined ,PlusOutlined} from '@ant-design/icons';
+import {UserWrapper} from './style'
 
 const { Meta } = Card;
 
@@ -71,11 +72,13 @@ class User extends React.Component {
         const { loading,tags, inputVisible, inputValue, editInputIndex, editInputValue } = this.state;
         const {TextArea,Password} = Input;
         return (
-
-               <Card title = '个人主页' style={{
+            <UserWrapper styled={{color:'#B0C4DE'}}>
+               <Card title = '个人主页' headStyle={{color:'#B0C4DE'}} style={{
                    margin : '50px auto',
                    textAlign : 'center',
                    width : '400px',
+                   background: '#00000060',
+                   color:'#B0C4DE'
                }} hoverable={true}>
                    <Avatar size={64} icon={<UserOutlined />} />
                    <div style={{
@@ -97,7 +100,6 @@ class User extends React.Component {
                            if (editInputIndex === index) {
                                return (
                                    <Input
-
                                        ref={this.saveEditInputRef}
                                        key={tag}
                                        size="small"
@@ -131,6 +133,7 @@ class User extends React.Component {
               >
                 {isLongTag ? `${tag.slice(0, 20)}...` : tag}
               </span>
+              
                                </Tag>
                            );
                            return isLongTag ? (
@@ -167,6 +170,7 @@ class User extends React.Component {
                        marginTop:'20px',
                        display:'flex',
                        alignItems:'center',
+                       color:'#B0C4DE'
                    }}>
                        <span style={{
                        }}>请输入个人简介：</span>
@@ -176,6 +180,7 @@ class User extends React.Component {
                    </div>
                    <Button >保存修改</Button>
                </Card>
+            </UserWrapper>
         );
     }
 }

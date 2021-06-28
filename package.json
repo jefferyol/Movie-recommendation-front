@@ -42,6 +42,8 @@
   },
   "devDependencies": {
     "@ant-design/icons": "^4.6.2",
-    "antd": "^4.16.5"
+    "antd": "^4.16.5",
+    "immutable": "^4.0.0-rc.12",
+    "redux-immutable": "^4.0.0"
   }
 }
