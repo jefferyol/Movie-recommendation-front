@@ -13,7 +13,7 @@ export const RegWrapper = styled.div`
 `;
 export const RegBox = styled.div`
 	width: 400px;
-	height: 300px;
+	height: 360px;
 	margin: 100px auto;
 	padding-top: 20px;
 	background: #00000060;
@@ -27,7 +27,7 @@ export const RegText = styled.span`
 `;
 export const Input = styled.input`
     width:48%;
-    height:11%;
+    height:10%;
     margin-left:2%;
     margin-top:3%;
     border-radius:8px;

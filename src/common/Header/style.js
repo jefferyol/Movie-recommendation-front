@@ -3,6 +3,7 @@ import logoPic from '../../statics/电影.png'
 export const HeaderWrapper = styled.div`
   position : relative;
   height : 56px;
+  background-image: linear-gradient(#324D84,#06113D);
 `
 export const Logo = styled.a`
   position : absolute;
@@ -20,21 +21,22 @@ export const Nav = styled.div`
   height : 100%;
   padding-right: 70px;
   box-sizing: border-box;
+  
 `
 export const NavItem = styled.div`
   line-height : 56px;
   padding : 0 15px;
   font-size : 17px; 
-  color : #333;
+  color : white;
   &.left {
     float: left;
   }
   &.right {
-    color:#66ccff;
+    color: 	#B0C4DE;
     float: right;
   }
   &.active {
-    color : #66ccff;
+    color : #B0C4DE;
   }
   
 `
@@ -79,11 +81,13 @@ export const Button = styled.div`
   &.personalrecommendation{
     background : #66ccff;
     color : #fff;
+    cursor:pointer;
   }
   &.search_btn{
     font-size:20px;
     border:none;
     float:right;
     margin-right:45%;
+    cursor:pointer;
   }
 `
