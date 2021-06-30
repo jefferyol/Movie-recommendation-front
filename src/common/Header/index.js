@@ -44,9 +44,11 @@ class Header extends React.Component{
                     注册
                 </Button>
                 </Link>
+                <Link to='/recommend'>
                 <Button className = 'personalrecommendation' >
                 个性化推荐
                 </Button>
+                </Link>               
             </Addition>
         </HeaderWrapper>
     )

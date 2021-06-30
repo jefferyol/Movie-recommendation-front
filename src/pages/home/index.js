@@ -15,7 +15,6 @@ class Home extends React.Component{
     state = {
         Type:'全部',
         Classification:['全部','喜剧','动作','爱情','悬疑','科幻','动画','战争','恐怖','冒险','记录'],
-        Quantity:20,
         Movie:[{
                 img:'https://puui.qpic.cn/vcover_vt_pic/0/mzc00200y72jo651609388700140/220',
                 title:'我的姐姐',

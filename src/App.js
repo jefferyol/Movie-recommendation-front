@@ -6,6 +6,7 @@ import Detail from './pages/detail/index'
 import Login from './pages/login/index'
 import Register from './pages/register/index'
 import User from './pages/user/index'
+import Recommend from './pages/recommend/index'
 import { Provider } from 'react-redux';
 import store from './store';
 function App() {
@@ -18,6 +19,7 @@ function App() {
             <Route path="/login" exact component={Login}></Route>
             <Route path="/user" exact component={User}></Route>
             <Route path="/register" exact component={Register}></Route>
+            <Route path="/recommend" exact component={Recommend}></Route>
         </BrowserRouter>
       </Provider>
   );

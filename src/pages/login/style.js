@@ -41,6 +41,7 @@ export const Button = styled.div`
 	border-radius: 15px;
 	margin: 25px auto;
 	text-align: center;
+	cursor:pointer;
 `;
 export const LoginHead = styled.div`
 	color:#B0C4DE;
