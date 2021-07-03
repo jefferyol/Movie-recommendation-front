@@ -35,7 +35,9 @@ class Header extends React.Component{
                 <NavItem className="right">个人主页 </NavItem>
                 </Link>
                 <NavSearch ref={this.search_ref}/>
-                <Button className = 'search_btn' onClick={this.search_fun}>🔍</Button>
+                <Link to='/search'><Button className = 'search_btn' onClick={this.search_fun}>🔍</Button>
+                </Link>
+                
             </Nav>
             
             <Addition>

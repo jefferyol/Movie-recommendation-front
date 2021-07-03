@@ -7,6 +7,7 @@ import Login from './pages/login/index'
 import Register from './pages/register/index'
 import User from './pages/user/index'
 import Recommend from './pages/recommend/index'
+import Search from './pages/search/index'
 import { Provider } from 'react-redux';
 import store from './store';
 function App() {
@@ -20,6 +21,7 @@ function App() {
             <Route path="/user" exact component={User}></Route>
             <Route path="/register" exact component={Register}></Route>
             <Route path="/recommend" exact component={Recommend}></Route>
+            <Route path="/search" exact component={Search}></Route>
         </BrowserRouter>
       </Provider>
   );

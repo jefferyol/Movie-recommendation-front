@@ -72,6 +72,7 @@ export const Actor = styled.div`
     text-overflow:ellipsis;
     white-space:nowrap;
     overflow:hidden;
+    color: black;
 `
 export const Score = styled.div`
     margin: 1% 2%;
@@ -79,6 +80,7 @@ export const Score = styled.div`
     color: #FF6200;
 `
 export const PopularBox = styled.div`
+    color: black;
     margin-left: 5%;
     width: 25%;
     height: 750px;

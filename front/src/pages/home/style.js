@@ -38,7 +38,6 @@ export const Title = styled.div`
     margin-left: 2%;
     font-weight:bold;
     font-size:larger;
-    color: black;
     &:hover{
         color: orange;
     }
