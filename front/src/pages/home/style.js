@@ -38,9 +38,13 @@ export const Title = styled.div`
     margin-left: 2%;
     font-weight:bold;
     font-size:larger;
+    color: black;
     &:hover{
         color: orange;
     }
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    overflow:hidden;
 `
 export const Picture = styled.img`
     width:100%;
@@ -51,9 +55,10 @@ export const Picture = styled.img`
 export const Actor = styled.div`
     margin: 3% 2%;
     font-size:middle;
-    text-overflow:ellipsis;/*省略号 */
-    white-space:nowrap;/*溢出时不换行 */
-    overflow:hidden;/*溢出时隐藏 */
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    overflow:hidden;
+    color: black;
 `
 export const Score = styled.div`
     margin: 2% 2%;

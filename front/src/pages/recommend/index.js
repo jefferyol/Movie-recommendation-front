@@ -3,12 +3,12 @@ import{ RecommendBox, PersonaliseBox,
         PopularBox,PopularTitle,PopularList,Ul,Li,
         PopularRank,PopularMovie,PopularScore,
         PersonaliseHeader,PersonaliseTitle,PersonaliseChange,
-        MovieList,Title,Picture,Actor,Score,
-        
+        MovieList,Title,Picture,Actor,Score,    
     } from './style';
+import { Link } from 'react-router-dom';
 class Recommend extends React.Component{
     state = {
-        Movie:[{
+        movie:[{
                 img:'https://puui.qpic.cn/vcover_vt_pic/0/mzc00200y72jo651609388700140/220',
                 title:'我的姐姐',
                 actor:'张子枫 金遥源 肖央 朱媛媛 段博文 梁靖康',
@@ -51,25 +51,25 @@ class Recommend extends React.Component{
             }
         ],
         RankList:[{
-            rank:1,title:'你好，李焕英',Score:'9.8'
+            rank:1,title:'你好，李焕英',score:'9.8'
         },{
-            rank:2,title:'战狼',Score:'7.8'
+            rank:2,title:'战狼',score:'7.8'
         },{
-            rank:3,title:'我的姐姐',Score:'8.8'
+            rank:3,title:'我的姐姐',score:'8.8'
         },{
-            rank:4,title:'西红市首富',Score:'6.8'
+            rank:4,title:'西红市首富',score:'6.8'
         },{
-            rank:5,title:'我不是药神',Score:'9.8'
+            rank:5,title:'我不是药神',score:'9.8'
         },{
-            rank:6,title:'建党伟业',Score:'8.8'
+            rank:6,title:'建党伟业',score:'8.8'
         },{
-            rank:7,title:'喜羊羊与灰太狼',Score:'9.8'
+            rank:7,title:'喜羊羊与灰太狼',score:'9.8'
         },{
-            rank:8,title:'熊出没',Score:'4.8'
+            rank:8,title:'熊出没',score:'4.8'
         },{
-            rank:9,title:'一秒钟',Score:'9.8'
+            rank:9,title:'一秒钟',score:'9.8'
         },{
-            rank:10,title:'赌神',Score:'8.8'
+            rank:10,title:'赌神',score:'8.8'
         }
         ]
     }
@@ -82,14 +82,19 @@ class Recommend extends React.Component{
                         <PersonaliseChange>🌀 不喜欢，换一批</PersonaliseChange>
                     </PersonaliseHeader>
                     {
-                    this.state.Movie.map((element,index)=>{
+                    this.state.movie.map((element,index)=>{
                         return(
-                            <MovieList key = {index}>
-                                <Picture src={element.img}/>
-                                <Title>{element.title}</Title>
-                                <Actor>{'主演：'+element.actor}</Actor>
-                                <Score>{'评分：'+element.score}</Score>
-                            </MovieList>
+                            <Link to={{
+                                pathname:`detail`
+                            }}>
+                                <MovieList key = {index}>
+                                    <Picture src={element.img}/>
+                                    <Title>{element.title}</Title>
+                                    <Actor>{'主演：'+element.actor}</Actor>
+                                    <Score>{'评分：'+element.score}</Score>
+                                </MovieList>
+                            </Link>
+                            
                         )
                         
                     })
@@ -102,11 +107,18 @@ class Recommend extends React.Component{
                             {
                                 this.state.RankList.map((element,index)=>{
                                     return(
-                                        <Li>
-                                            <PopularRank>{element.rank}</PopularRank>
-                                            <PopularMovie>{element.title}</PopularMovie>
-                                            <PopularScore>{element.Score}</PopularScore>
-                                        </Li>
+                                        <Link to={
+                                            {
+                                                pathname:`detail`
+                                            }
+                                        }>
+                                            <Li>
+                                                <PopularRank>{element.rank}</PopularRank>
+                                                <PopularMovie>{element.title}</PopularMovie>
+                                                <PopularScore>{element.score}</PopularScore>
+                                            </Li>
+                                        </Link>
+                                        
                                     )
                                 })
                             }                           
