@@ -49,7 +49,13 @@ class Home extends React.Component{
                             return(
                                 <Link to={
                                     {
-                                        pathname:`detail`
+                                        pathname:`detail`,
+                                        query:{
+                                            title:element.title,
+                                            score:element.score,
+                                            actor:element.title,
+                                            source:element.source
+                                        }
                                     }
                                 }>
                                     <MovieList key = {index}>
@@ -65,7 +71,13 @@ class Home extends React.Component{
                             return(
                                 <Link to={
                                     {
-                                        pathname:`detail`
+                                        pathname:`detail`,
+                                        query:{
+                                            title:element.title,
+                                            score:element.score,
+                                            actor:element.title,
+                                            source:element.source
+                                        }
                                     }
                                 }>
                                     <MovieList key = {index}>

@@ -7,7 +7,11 @@ class Detail extends React.Component{
     constructor(props){
         super(props)
         this.state = {
-            movie:{title: "袁隆平", score: 9.9, actor:"主演：果静林 曹艳艳",source:'https://v.qq.com/txp/iframe/player.html?vid=l0026wusow1'}
+            movie:{
+                title: this.props.location.query.title, 
+                score: this.props.location.query.score, 
+                actor: this.props.location.query.actor,
+                source:this.props.location.query.source}
         }
     }
     render(){
