@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50528
 File Encoding         : 65001
 
-Date: 2021-07-03 12:54:47
+Date: 2021-07-06 10:12:26
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -34,7 +34,8 @@ CREATE TABLE `movie` (
 -- ----------------------------
 -- Records of movie
 -- ----------------------------
-INSERT INTO `movie` VALUES ('0', 'img', 'type', 'title', 'actor', 'score', 'link', 'source');
+INSERT INTO `movie` VALUES ('0', '//puui.qpic.cn/vcover_vt_pic/0/s5gyg482zt8zf5mt1463842969.jpg/220', '剧情', '袁隆平', '主演：果静林 曹艳艳', '8.2', 'https://v.qq.com/x/cover/s5gyg482zt8zf5m.html', 'https://v.qq.com/txp/iframe/player.html?vid=l0026wusow1');
+INSERT INTO `movie` VALUES ('1', '//puui.qpic.cn/vcover_vt_pic/0/4xf4ni3vwii9kl11506674275/220', '剧情', '建军大业', '主演：刘烨 朱亚文 黄志忠 欧豪 王景春 杨大鹏 霍建华 关晓彤', '7.6', 'https://v.qq.com/x/cover/4xf4ni3vwii9kl1.html', 'https://v.qq.com/txp/iframe/player.html?vid=p00246at0hr');
 INSERT INTO `movie` VALUES ('2', '//puui.qpic.cn/vcover_vt_pic/0/pv1noxn2wtgzasht1444957124.jpg/220', '剧情', '赤道', '主演：张家辉 张学友 张震 王学圻 池珍熙 崔始源 余文乐 文咏珊', '8', 'https://v.qq.com/x/cover/pv1noxn2wtgzash.html', 'https://v.qq.com/txp/iframe/player.html?vid=q00168qh74n');
 INSERT INTO `movie` VALUES ('3', '//puui.qpic.cn/vcover_vt_pic/0/piegqd6mz97tr8b1559743696/220', '剧情', '机械师', '主演：杰森·斯坦森 本·福斯特 托尼·戈德温 唐纳德·萨瑟兰 杰夫·蔡斯', '8.4', 'https://v.qq.com/x/cover/piegqd6mz97tr8b.html', 'https://v.qq.com/txp/iframe/player.html?vid=i00227leh0g');
 INSERT INTO `movie` VALUES ('4', '//puui.qpic.cn/vcover_vt_pic/0/msbt3iret5tgwu81567135959/220', '剧情', '赌神', '主演：周润发 王祖贤 刘德华 张敏', '9', 'https://v.qq.com/x/cover/msbt3iret5tgwu8.html', 'https://v.qq.com/txp/iframe/player.html?vid=m0025c8sgbz');
