@@ -6,10 +6,8 @@ import { Link } from 'react-router-dom';
 class Search extends React.Component{
     state = {
         movie:[
-            {'img': '//puui.qpic.cn/vcover_vt_pic/0/ge1vg9evjfeb6l01568013388/220', 'title': '夏洛特烦恼','actor': '主演：沈腾 马丽 尹正 王智 艾伦 田雨 宋阳', 'score': '8.7 '}, 
-            {'img': '//puui.qpic.cn/vcover_vt_pic/0/ujnamwpqg1xg8qm1559139238/220', 'title': '西游·降魔篇', 'actor': '主演：文章 舒淇 黄渤 罗志祥', 'score': '8.5 '}, 
-            {'img': '//puui.qpic.cn/vcover_vt_pic/0/b40ff7kummjfp7e1566963062/220', 'title': '澳门风云3', 'actor': '主演：周润发 张家辉 刘德华 张学友 李宇春 刘嘉玲 余文乐', 'score': '7 '}
-        ]
+            {'img': '//puui.qpic.cn/vcover_vt_pic/0/4xf4ni3vwii9kl11506674275/220', 'type': '剧情', 'title': '建军大业', 'actor': '主演：刘烨 朱亚文 黄志忠 欧豪 王景春 杨大鹏 霍建华 关晓彤', 'score': '7.6 ', 'link': 'https://v.qq.com/x/cover/4xf4ni3vwii9kl1.html', 'source': 'https://v.qq.com/txp/iframe/player.html?vid=p00246at0hr'}
+        ]   
     }
     render(){
         return(
@@ -22,7 +20,13 @@ class Search extends React.Component{
                         return(
                             <Link to={
                                 {
-                                    pathname:`detail`
+                                    pathname:`detail`,
+                                    query:{
+                                            title:element.title,
+                                            score:element.score,
+                                            actor:element.title,
+                                            source:element.source
+                                        }
                                 }
                             }>
                                 <ResultList>
