@@ -1,23 +1,33 @@
 import React from 'react';
+import axios from 'axios';
 import{
     SearchBox,ResultList,Picture,Title,Actor,Score,PictureBox,TextBox,ResultTitle
 }from './style'
 import { Link } from 'react-router-dom';
 class Search extends React.Component{
-    state = {
-        movie:[
-            {'img': '//puui.qpic.cn/vcover_vt_pic/0/4xf4ni3vwii9kl11506674275/220', 'type': '剧情', 'title': '建军大业', 'actor': '主演：刘烨 朱亚文 黄志忠 欧豪 王景春 杨大鹏 霍建华 关晓彤', 'score': '7.6 ', 'link': 'https://v.qq.com/x/cover/4xf4ni3vwii9kl1.html', 'source': 'https://v.qq.com/txp/iframe/player.html?vid=p00246at0hr'}
-        ]   
+    constructor(props) {
+        super(props);
+        this.state = {
+            Movie:[],
+            search_content :this.props.location.query.search_content
+        }
+    }
+    componentDidMount=()=>{
+        axios.get('http://localhost:8080/movie/searchMovieList', {            
+    }).then(value => {
+        this.setState({Movie:value.data})
+    });
     }
     render(){
         return(
             <SearchBox>
                 <ResultTitle>
-                    搜索结果：
+                   '{this.props.location.query.search_content}' 搜索结果：
                 </ResultTitle>
                 {
-                    this.state.movie.map((element,index)=>{
-                        return(
+                    this.state.Movie.map((element,index)=>{
+                        if(element.title===this.state.search_content||element.title.includes(this.state.search_content)){
+                            return(
                             <Link to={
                                 {
                                     pathname:`detail`,
@@ -43,7 +53,9 @@ class Search extends React.Component{
                                 </ResultList>
                             </Link>
                             
-                        )}
+                        )
+                        }
+                        }
                         
                     )
                 }

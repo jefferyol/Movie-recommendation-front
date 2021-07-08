@@ -90,4 +90,12 @@ export const Button = styled.div`
     margin-right:45%;
     cursor:pointer;
   }
+  &.search_btn_hidden{
+    font-size:20px;
+    border:none;
+    float:right;
+    margin-right:45%;
+    cursor:pointer;
+    display: none;
+  }
 `

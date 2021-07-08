@@ -8,15 +8,41 @@ import {
     Addition,
     Button,
 }from './style'
+import {message} from 'antd';
+import { withRouter } from 'react-router-dom'
 import { Link } from 'react-router-dom';
 class Header extends React.Component{
+    state={search_content:''}
     search_ref = React.createRef()
+    search_btn = React.createRef()
+    updateSearchContent = ()=>{
+        const search_content = this.search_ref.current.value
+        if (search_content!==''){
+            this.search_btn.current.style.display = 'inline-block'
+        }
+        else if (search_content===''){
+            this.search_btn.current.style.display = 'none'
+        }
+        this.setState({search_content:this.search_ref.current.value})
+    }
     search_fun = ()=>{
         const search_content = this.search_ref.current.value
-        if(search_content===''){
-            alert('请输入关键字或片名')
-            return
-        }
+        this.setState({search_content:search_content})
+        document.getElementById('searchContent').value=''
+        this.search_btn.current.style.display = 'none'
+        //this.setState({search_content:search_content},()=>{console.log(this.state.search_content)})
+        // if(search_content===''){
+        //     message.error('搜索框内容为空');
+        // }
+        // else{
+            // this.props.history.push({
+            //     pathname: '/search',
+            //     query: {
+            //         search_content:this.state.search_content
+            //     },
+            // });
+        // }
+        // this.search_ref.current.value=''
     }
     render(){
         return (
@@ -34,10 +60,17 @@ class Header extends React.Component{
                 <Link to = '/user'>
                 <NavItem className="right">个人主页 </NavItem>
                 </Link>
-                <NavSearch ref={this.search_ref}/>
-                <Link to='/search'><Button className = 'search_btn' onClick={this.search_fun}>🔍</Button>
+                <NavSearch id='searchContent' ref={this.search_ref} onChange={this.updateSearchContent}/>
+                <Link to={
+                            {
+                                pathname:`search`,
+                                query:{
+                                    search_content:this.state.search_content
+                                }
+                            }
+                        }><Button className = 'search_btn' style={{display:'none'}} ref={this.search_btn} onClick={this.search_fun}>🔍</Button>
                 </Link>
-                
+                  
             </Nav>
             
             <Addition>
@@ -58,4 +91,4 @@ class Header extends React.Component{
     
     
 }
-export default Header;
+export default withRouter(Header);
